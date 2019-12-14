@@ -1,1 +1,0 @@
-# lays-page-SNP
