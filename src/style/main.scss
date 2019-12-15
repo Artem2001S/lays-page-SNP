@@ -1,6 +1,6 @@
-@import "./fonts.scss";
 @import "./normalize.scss";
-
-body  {
-  margin: 0;
-}
+@import "./_fonts.scss";
+@import "./_variables.scss";
+@import "./base";
+@import "./menu";
+@import "./nav";
