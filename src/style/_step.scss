@@ -1,0 +1,95 @@
+.step {
+  width: 13%;
+  height: 39%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 5px;
+
+  &__icon {
+    position: relative;
+    margin: 0 auto;
+    width: 71%;
+    height: 0;
+    border-radius: 50%;
+    padding-bottom: 71%;
+    background: #ffffff;
+
+    &[data-icon]::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+
+      transform: translate(-50%, -50%);
+
+      width: 90%;
+      height: 90%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+    }
+
+    &[data-icon="camera"]::after {
+      background-image: url("../assets/img/summer-with-lays/photo.png");
+    }
+
+    &[data-icon="heart"]::after {
+      background-image: url("../assets/img/summer-with-lays/heart.png");
+    }
+
+    &[data-icon="award"]::after {
+      background-image: url("../assets/img/summer-with-lays/box.png");
+    }
+  }
+
+  &__label {
+    font-family: $fontFam;
+    text-align: center;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 23px;
+    color: rgb(69, 55, 10);
+    padding-top: 18px;
+
+    @media screen and (max-width: 1400px) {
+      font-size: 14px;
+      width: 100%;
+      margin: auto;
+      letter-spacing: 1px;
+      line-height: 20px;
+      & .red-text {
+        font-size: 15px;
+        line-height: 15px;
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      letter-spacing: initial;
+      line-height: initial;
+      width: 110%;
+    }
+
+    @media screen and (max-width: 1024px) {
+      padding-top: 10px;
+    }
+
+    @media screen and (max-width: 998px) {
+      font-size: 1.37rem;
+      padding-top: 9%;
+    }
+
+    & .red-text {
+      line-height: 30px;
+      font-size: 17px;
+
+      @media screen and (max-width: 1400px) {
+        font-size: 15px;
+        line-height: 15px;
+      }
+
+      @media screen and (max-width: 998px) {
+        font-size: calc(1.37rem + 0.5px);
+      }
+    }
+  }
+}

@@ -1,14 +1,14 @@
 .nav {
-  padding-top: 5.9rem;
+  padding-top: 59px;
 
   &__item {
     position: relative;
-    padding-top: 8.2rem;
-    padding-bottom: 2.3rem;
+    padding-top: 82px;
+    padding-bottom: 23px;
 
     cursor: pointer;
     font-family: $fontFam;
-    font-size: 1.4rem;
+    font-size: 14px;
     color: rgb(85, 85, 85);
     text-align: center;
 
@@ -26,13 +26,13 @@
     content: "";
     position: absolute;
     top: 0;
-    // left: 0;
+
     display: flex;
     align-items: center;
     justify-content: center;
 
     width: 100%;
-    height: 10rem;
+    height: 100px;
   }
 
 
@@ -42,11 +42,11 @@
 
   &__item[data-icon="gift-icon"]::before {
     background: url("../assets/img/menu/about-project.png") no-repeat center;
-    height: 9rem;
+    height: 90px;
   }
 
   &__item[data-icon="geo-position-icon"]::before {
     background: url("../assets/img/menu/summer-with-lays.png") no-repeat center;
-    height: 10.6rem;
+    height: 105px;
   }
 }

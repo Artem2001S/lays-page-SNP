@@ -1,8 +1,14 @@
 .menu {
   width: 150px;
   position: fixed;
+  left: 0;
+  top: 0;
   background: #f6f6f6;
   height: 100%;
+
+  @media screen and (max-width: 1024px) {
+    width: 110px;
+  }
 
   &__logo {
     position: relative;
@@ -10,7 +16,7 @@
     &::before {
       content: "";
       position: absolute;
-      top: 2.9rem;
+      top: 29px;
       left: 0;
       width: 100%;
       height: 80px;
@@ -18,10 +24,10 @@
     }
 
     &-text {
-      padding-top: 12.4rem;
+      padding-top: 124px;
 
       font-family: $fontFam;
-      font-size: 1.6rem;
+      font-size: 16px;
       font-weight: 500;
       color: $red-text;
       text-align: center;

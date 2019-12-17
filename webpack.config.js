@@ -101,7 +101,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              publicPath: '/assets/img',
+              publicPath: './assets/img',
               outputPath: './assets/img/',
               name: '[folder]/[name].[ext]',
               esModule: false
