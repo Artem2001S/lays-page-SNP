@@ -1,18 +1,41 @@
 .step {
+  opacity: 0;
+  // animation: show-element_opacity 1s;
+  // animation-fill-mode: forwards;
+  // animation-delay: 1s;
   width: 13%;
   height: 39%;
+
   display: flex;
   flex-direction: column;
   margin: 0 5px;
 
   &__icon {
     position: relative;
-    margin: 0 auto;
+
     width: 71%;
-    height: 0;
     border-radius: 50%;
     padding-bottom: 71%;
     background: #ffffff;
+
+    margin: 0 auto;
+
+    &[data-icon] {
+      animation: show-element_size 0.4s linear;
+      animation-fill-mode: forwards;
+    }
+
+    &[data-icon="camera"] {
+      animation-delay: 1s;
+    }
+
+    &[data-icon="heart"] {
+      animation-delay: 1.4s;
+    }
+
+    &[data-icon="award"] {
+      animation-delay: 1.8s;
+    }
 
     &[data-icon]::after {
       content: "";
@@ -57,6 +80,7 @@
       margin: auto;
       letter-spacing: 1px;
       line-height: 20px;
+
       & .red-text {
         font-size: 15px;
         line-height: 15px;
@@ -91,5 +115,27 @@
         font-size: calc(1.37rem + 0.5px);
       }
     }
+  }
+}
+
+@keyframes show-element_opacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes show-element_size {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }

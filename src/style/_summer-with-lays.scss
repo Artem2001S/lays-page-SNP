@@ -2,9 +2,12 @@
   position: relative;
   width: 100%;
 
+  overflow: hidden;
+
   &__background {
     width: 100%;
     height: auto;
+    animation: right-to-left 1s ease-out;
   }
 
   & .steps {
@@ -20,6 +23,8 @@
     top: calc(4.75rem + 39%);
     left: 0;
     width: 100%;
+
+    animation: right-to-left 1s ease-out;
 
     padding-left: 5rem;
     padding-top: 7px;
@@ -44,14 +49,14 @@
       line-height: 6.99vw;
 
       @media screen and (max-width: 1024px) {
-        font-size: 5.8vw;
+        font-size: 5.8rem;
       }
     }
 
     &_middle {
-      line-height: 5.1rem;
-      font-size: 5.22rem;
-      letter-spacing: 5px;
+      line-height: 5.5rem;
+      font-size: 5.25rem;
+      letter-spacing: 5.5px;
       font-weight: 900;
 
       @media screen and (max-width: 1400px) {
@@ -68,5 +73,24 @@
     &_font-weight_black {
       font-weight: 900;
     }
+  }
+}
+
+@keyframes right-to-left {
+  from {
+    margin-left: 25%;
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  85% {
+    margin-left: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
