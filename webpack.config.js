@@ -111,13 +111,14 @@ module.exports = {
       },
 
       {
-        test: /\.(ttf|eot)$/,
+        test: /\.(woff|eot|otf|ttf|truetype)$/,
         exclude: /node_modules/,
         loader: 'file-loader',
         options: {
           publicPath: './assets/fonts/',
-          name: './assets/fonts/[name].[ext]',
-          limit: 1000
+          outputPath: './assets/fonts/',
+          name: '[name].[ext]',
+          esModule: false
         }
       }
     ]
