@@ -1,0 +1,141 @@
+.gallery {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: stretch;
+  margin-top: -4px;
+
+  &__banner {
+    position: relative;
+    width: 50%;
+    & img {
+      width: 100%;
+      @media screen and (max-width: 1400px) {
+        height: 100%;
+      }
+    }
+  }
+
+  &__images {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 4px;
+
+    background-color: #ffffff;
+    width: 50%;
+    padding: 30px 23px;
+
+    @media screen and (max-width: 1400px) {
+      padding: 1.857rem 1.5rem;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 17.81rem;
+    padding-left: 6.25rem;
+
+    font-family: $fontFam;
+    font-size: 2.827rem;
+    line-height: 3.82rem;
+    font-weight: 700;
+
+    @media screen and (max-width: 1400px) {
+      line-height: 3.85rem;
+      padding-top: 17.5rem;
+      padding-left: 6.2rem;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 7.72rem;
+      top: 3.22rem;
+      background-image: url("./../assets/img/gallery/vk-insta-pointer.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 10.85rem;
+      height: 100%;
+
+      @media screen and (max-width: 1400px) {
+        left: 7.6rem;
+        top: 3.1rem;
+      }
+    }
+
+    & .hashtag {
+      position: relative;
+      z-index: 2;
+      margin-left: -9px;
+      letter-spacing: -1px;
+      @media screen and (max-width: 1400px) {
+        letter-spacing: -1px;
+        padding: 0px 17px 0px 9px;
+      }
+    }
+
+    & .button {
+      position: relative;
+      z-index: 3;
+      margin-top: 2.55rem;
+      margin-left: -0.52rem;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 13.6rem;
+    max-height: 13.55rem;
+    min-height: 13.55rem;
+    margin: 2px 4px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    @media screen and (max-width: 1400px) {
+      max-height: 13.45rem;
+      min-height: 13.45rem;
+      max-height: 13.45rem;
+    }
+
+    &:nth-child(1) {
+      background-image: url("../assets/img/gallery/gallery-1.png");
+    }
+
+    &:nth-child(2) {
+      background-image: url("../assets/img/gallery/gallery-2.png");
+    }
+
+    &:nth-child(3) {
+      background-image: url("../assets/img/gallery/gallery-3.png");
+    }
+
+    &:nth-child(4) {
+      background-image: url("../assets/img/gallery/gallery-4.png");
+    }
+
+    &:nth-child(5) {
+      background-image: url("../assets/img/gallery/gallery-5.png");
+    }
+
+    &:nth-child(6) {
+      background-image: url("../assets/img/gallery/gallery-6.png");
+    }
+
+    &:nth-child(7) {
+      background-image: url("../assets/img/gallery/gallery-7.png");
+      background-position: 0 0;
+    }
+
+    &:nth-child(8) {
+      background-image: url("../assets/img/gallery/gallery-8.png");
+    }
+
+    &:nth-child(9) {
+      background-image: url("../assets/img/gallery/gallery-9.png");
+    }
+  }
+}

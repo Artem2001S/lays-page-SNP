@@ -1,0 +1,21 @@
+.button {
+  outline: none;
+  width: 15.75rem;
+  height: 4.54rem;
+  padding-top: 2px;
+  background-color: rgba(143,12,0,.1);
+  text-transform: uppercase;
+  border: 2px solid #ffffff;
+  letter-spacing: 1px;
+  text-align: center;
+
+  font-size: 1.66rem;
+  color: #ffffff;
+
+  cursor: pointer;
+  transition: background-color .5s ease;
+
+  &:hover {
+    background-color: rgba(143,12,0,0.18);
+  }
+}
