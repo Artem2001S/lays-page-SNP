@@ -8,6 +8,19 @@
     width: 100%;
     height: auto;
     animation: right-to-left 1s ease-out;
+
+    @media screen and (max-width: 680px) {
+      display: none;
+      animation: none;
+    }
+
+    &_mobile {
+      display: none;
+
+      @media screen and (max-width: 680px) {
+        display: block;
+      }
+    }
   }
 
   & .steps {
@@ -16,6 +29,13 @@
     left: 0;
     padding-top: 4.75rem;
     padding-left: 4.59rem;
+
+    @media screen and (max-width: 680px) {
+      top: 145px;
+      padding-top: 0;
+      padding-left: 0rem;
+      padding-right: 7.9rem;
+    }
   }
 
   &__label {
@@ -41,6 +61,16 @@
       font-size: 3rem;
     }
 
+    @media screen and (max-width: 680px) {
+      padding-top: 0;
+      top: 20px;
+      padding-left: 0;
+      text-align: center;
+      font-size: 25px;
+      line-height: 25px;
+      letter-spacing: 1px;
+    }
+
     &_large {
       line-height: normal;
       font-size: 6.29rem;
@@ -50,6 +80,13 @@
 
       @media screen and (max-width: 1024px) {
         font-size: 5.8rem;
+      }
+
+      @media screen and (max-width: 680px) {
+        font-size: 44px;
+        line-height: 44px;
+        letter-spacing: 2px;
+        padding-left: 7px;
       }
     }
 
@@ -67,6 +104,12 @@
         font-size: 4.71rem;
         line-height: 5.9rem;
         letter-spacing: 3.5px;
+      }
+
+      @media screen and (max-width: 680px) {
+        font-size: 37px;
+        line-height: 25px;
+        letter-spacing: 1px;
       }
     }
 

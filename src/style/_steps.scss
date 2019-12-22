@@ -19,4 +19,8 @@
     animation-fill-mode: forwards;
     animation-delay: 1.8s;
   }
+
+  @media screen and (max-width: 680px) {
+    justify-content: space-around;
+  }
 }

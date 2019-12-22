@@ -112,7 +112,6 @@
     }
   }
 
-
   &__burger {
     display: none;
 
@@ -184,7 +183,7 @@
       text-align: center;
 
       @media screen and (max-width: 680px) {
-        padding-top: 27px;
+        padding-top: 28px;
         font-size: 18px;
         letter-spacing: 1px;
         padding-left: 13px;
