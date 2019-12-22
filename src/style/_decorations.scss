@@ -9,3 +9,37 @@
 .small-letter-spacing {
   letter-spacing: -1px;
 }
+
+.animate-right_hide {
+  animation: to-right_hide 0.4s ease-in;
+  animation-fill-mode: forwards;
+}
+
+.animate-left_hide {
+  animation: to-left_hide 0.4s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes to-right_hide {
+  0% {
+    opacity: 1;
+    right: 0;
+  }
+
+  100% {
+    opacity: 0;
+    right: -40%;
+  }
+}
+
+@keyframes to-left_hide {
+  0% {
+    opacity: 1;
+    left: 0;
+  }
+
+  100% {
+    opacity: 0;
+    left: -40%;
+  }
+}

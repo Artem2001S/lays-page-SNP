@@ -12,6 +12,11 @@ body {
   @media screen and (max-width: 1024px) {
     padding-left: 110px;
   }
+
+  @media screen and (max-width: 680px) {
+    padding-left: 0;
+    padding-top: 80px;
+  }
 }
 
 html {
