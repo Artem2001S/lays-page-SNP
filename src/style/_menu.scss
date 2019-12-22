@@ -35,7 +35,7 @@
       left: 0;
     }
 
-    &:checked ~ nav {
+    &:checked ~ .nav {
       display: block;
     }
 
@@ -91,7 +91,7 @@
   @keyframes to-left_show {
     0% {
       opacity: 0;
-      left: -40%;
+      left: -30%;
     }
 
     100% {
@@ -103,7 +103,7 @@
   @keyframes to-right_show {
     0% {
       opacity: 0;
-      right: -40%;
+      right: -30%;
     }
 
     100% {
