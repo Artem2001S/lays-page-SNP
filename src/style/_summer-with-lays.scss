@@ -4,6 +4,7 @@
 
   overflow: hidden;
 
+  background-color: #ffda2d;
   &__background {
     width: 100%;
     height: auto;
@@ -11,7 +12,7 @@
 
     @media screen and (max-width: 680px) {
       display: none;
-      animation: none;
+      animation: show 0.3s ease-out;
     }
 
     &_mobile {
@@ -64,11 +65,13 @@
     @media screen and (max-width: 680px) {
       padding-top: 0;
       top: 20px;
-      padding-left: 0;
+      padding-left: 1px;
       text-align: center;
       font-size: 25px;
       line-height: 25px;
       letter-spacing: 1px;
+      color: #d62b2b;
+      animation: none;
     }
 
     &_large {
@@ -86,7 +89,7 @@
         font-size: 44px;
         line-height: 44px;
         letter-spacing: 2px;
-        padding-left: 7px;
+        padding-left: 8px;
       }
     }
 
@@ -131,6 +134,21 @@
 
   85% {
     margin-left: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    background-color: #ffda2d;
+  }
+
+  50% {
+    opacity: 0.4;
   }
 
   to {

@@ -5,6 +5,11 @@
   justify-content: stretch;
   margin-top: -4px;
 
+  @media screen and (max-width: 680px) {
+    flex-direction: column;
+    margin-top: 0px;
+  }
+
   &__banner {
     position: relative;
     width: 50%;
@@ -12,6 +17,21 @@
       width: 100%;
       @media screen and (max-width: 1400px) {
         height: 100%;
+      }
+    }
+
+    &_mobile {
+      display: none;
+    }
+
+    @media screen and (max-width: 680px) {
+      width: 100%;
+      & img {
+        display: none;
+      }
+
+      & img.gallery__banner_mobile {
+        display: block;
       }
     }
   }
@@ -27,6 +47,14 @@
 
     @media screen and (max-width: 1400px) {
       padding: 1.857rem 1.5rem;
+    }
+
+    @media screen and (max-width: 680px) {
+      width: 100%;
+      padding-top: 13px;
+      padding-left: 15px;
+      padding-right: 15px;
+      grid-column-gap: 4px;
     }
   }
 
@@ -48,20 +76,41 @@
       padding-left: 6.2rem;
     }
 
+    @media screen and (max-width: 680px) {
+      font-size: 6.375rem;
+      line-height: 8.625rem;
+      padding-top: 47rem;
+      padding-left: 11rem;
+    }
+
     &::before {
       content: "";
       position: absolute;
       left: 7.72rem;
       top: 3.22rem;
+
+      width: 10.85rem;
+      height: 100%;
+
       background-image: url("./../assets/img/gallery/vk-insta-pointer.png");
       background-repeat: no-repeat;
       background-size: contain;
-      width: 10.85rem;
-      height: 100%;
+
 
       @media screen and (max-width: 1400px) {
         left: 7.6rem;
         top: 3.1rem;
+      }
+
+      @media screen and (max-width: 680px) {
+        top: 8.1rem;
+        left: 7.0rem;
+
+        width: 42.5rem;
+        height: 0;
+        padding-bottom: 42.5rem;
+
+        background-image: url("./../assets/img/gallery/vk-insta-pointer_mobile.png");
       }
     }
 
@@ -70,9 +119,16 @@
       z-index: 2;
       margin-left: -9px;
       letter-spacing: -1px;
+
       @media screen and (max-width: 1400px) {
-        letter-spacing: -1px;
         padding: 0px 17px 0px 9px;
+        letter-spacing: -1px;
+      }
+
+      @media screen and (max-width: 680px) {
+        display: inline-block;
+        padding: 0px 9px 0px 4px;
+        margin-left: -4px;
       }
     }
 
@@ -81,6 +137,12 @@
       z-index: 3;
       margin-top: 2.55rem;
       margin-left: -0.52rem;
+
+      @media screen and (max-width: 680px) {
+        margin-top: 0;
+        top: -9.5rem;
+        margin-left: 44.71rem;
+      }
     }
   }
 
@@ -98,7 +160,14 @@
     @media screen and (max-width: 1400px) {
       max-height: 13.45rem;
       min-height: 13.45rem;
-      max-height: 13.45rem;
+      max-width: 13.45rem;
+    }
+
+    @media screen and (max-width: 680px) {
+      max-height: 29.3rem;
+      min-height: 29.3rem;
+      max-width: 29.9rem;
+      margin: 2px auto;
     }
 
     &:nth-child(1) {
