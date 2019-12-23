@@ -18,45 +18,48 @@
 
   &-dropper {
     display: none;
-    &:checked ~ div span.middle {
-      animation: hide-burger-menu-item 0.7s;
-      animation-fill-mode: forwards;
-    }
 
-    &:checked ~ div span.top {
-      transform: rotate(45deg);
-      top: 0;
-      left: 0;
-    }
+    @media screen and (max-width: 680px) {
+      &:checked ~ div span.middle {
+        animation: hide-burger-menu-item 0.7s;
+        animation-fill-mode: forwards;
+      }
 
-    &:checked ~ div span.bottom {
-      transform: rotate(-45deg);
-      top: 22.5px;
-      left: 0;
-    }
+      &:checked ~ div span.top {
+        transform: rotate(45deg);
+        top: 0;
+        left: 0;
+      }
 
-    &:checked ~ .nav {
-      display: block;
-    }
+      &:checked ~ div span.bottom {
+        transform: rotate(-45deg);
+        top: 22.5px;
+        left: 0;
+      }
 
-    &:checked ~ nav .nav__item:nth-child(1) {
-      animation: to-left_show 0.5s;
-      animation-fill-mode: forwards;
-    }
+      &:checked ~ .nav {
+        display: block;
+      }
 
-    &:checked ~ nav .nav__item:nth-child(2) {
-      animation: to-right_show 0.5s;
-      animation-fill-mode: forwards;
-    }
+      &:checked ~ nav .nav__item:nth-child(1) {
+        animation: to-left_show 0.5s;
+        animation-fill-mode: forwards;
+      }
 
-    &:checked ~ nav .nav__item:nth-child(3) {
-      animation: to-left_show 0.5s;
-      animation-fill-mode: forwards;
-    }
+      &:checked ~ nav .nav__item:nth-child(2) {
+        animation: to-right_show 0.5s;
+        animation-fill-mode: forwards;
+      }
 
-    &:checked ~ nav .nav__item:nth-child(4) {
-      animation: to-right_show 0.5s;
-      animation-fill-mode: forwards;
+      &:checked ~ nav .nav__item:nth-child(3) {
+        animation: to-left_show 0.5s;
+        animation-fill-mode: forwards;
+      }
+
+      &:checked ~ nav .nav__item:nth-child(4) {
+        animation: to-right_show 0.5s;
+        animation-fill-mode: forwards;
+      }
     }
   }
 
