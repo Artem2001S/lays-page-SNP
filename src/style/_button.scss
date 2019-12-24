@@ -9,6 +9,7 @@
   letter-spacing: 1px;
   text-align: center;
 
+  font-family: $fontFam;
   font-size: 1.66rem;
   color: #ffffff;
 
@@ -16,7 +17,7 @@
   transition: background-color .5s ease;
 
   &:hover {
-    background-color: rgba(143,12,0,0.18);
+    background-color: rgba(143,12,0,0.28);
   }
 
   @media screen and (max-width: 680px) {

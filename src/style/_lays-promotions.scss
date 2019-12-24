@@ -1,0 +1,244 @@
+.lays-promotions {
+  overflow: hidden;
+  margin-top: -5px;
+
+  &__list {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+  }
+
+  &__item {
+    position: relative;
+    width: 50%;
+    & img {
+      position: relative;
+      z-index: 4;
+      width: 100%;
+      height: 100%;
+      @media screen and (max-width: 680px) {
+        display: none;
+      }
+    }
+
+    & img.img-mobile {
+      display: none;
+      @media screen and (max-width: 680px) {
+        display: block;
+      }
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    z-index: 5;
+  }
+
+  &__title {
+    color: #ffffff;
+    line-height: 4.22rem;
+
+    font-family: $fontFam;
+    font-size: 3.92rem;
+    font-weight: 700;
+    letter-spacing: -0.1px;
+
+    &_black {
+      color: $black-text;
+    }
+
+    &_large {
+      font-size: 4.32rem;
+    }
+  }
+
+  &__description {
+    color: #ffffff;
+
+    letter-spacing: -2px;
+    line-height: 1.2rem;
+    font-family: $fontFam;
+    font-size: 1.43rem;
+    font-weight: 400;
+
+    & > div.small-letter-spacing {
+      letter-spacing: -1.3px;
+    }
+  }
+
+  & [data-item="red"] {
+    // triangle
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      z-index: 6;
+      right: -5.14rem;
+
+      height: 10.95rem;
+      width: 5.04rem;
+
+      transform: translateY(-86%) scale(1.2);
+      background: url("../assets/img/lays-promotions/triangle_red.png") no-repeat;
+
+      @media screen and (max-width: 1400px) {
+        transform: translateY(-91%) scale(1);
+        right: -5.04rem;
+      }
+    }
+
+    & .lays-promotions__title {
+      padding-left: 14.8rem;
+
+      @media screen and (max-width: 1400px) {
+        line-height: 4.2rem;
+        letter-spacing: -0.5px;
+        padding-left: 14.6rem;
+
+        // improve pixel perfect
+        margin-top: -1px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -4.11rem;
+        left: -3rem;
+        z-index: 6;
+
+        width: 17.4rem;
+        height: 19.153rem;
+
+        background-image: url("../assets/img/lays-promotions/lays-bag.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @media screen and (max-width: 1400px) {
+          top: -4.23rem;
+          left: -3.1rem;
+        }
+      }
+    }
+
+    & .lays-promotions__content {
+      margin-top: 10.8rem;
+      margin-left: 6rem;
+    }
+
+    & .lays-promotions__description {
+      margin-top: 5.1rem;
+      line-height: 1.73rem;
+
+      // improve pixel-perfect
+      margin-left: -2px;
+
+      @media screen and (max-width: 1400px) {
+        line-height: 1.73rem;
+        margin-left: -3px;
+      }
+    }
+
+    & .button {
+      margin-top: 3rem;
+
+      // improve pixel perfect
+      margin-left: -4px;
+
+      @media screen and (max-width: 1400px) {
+        margin-top: 2.9rem;
+        margin-left: -5px;
+      }
+    }
+  }
+
+  & [data-item="map"],
+  & [data-item="beach"] {
+    margin-top: -6px;
+  }
+
+  & [data-item="map"] {
+    height: 102.5%;
+    top: 7px;
+
+    // triangle
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 6;
+      top: 50%;
+      height: 100%;
+      width: 7rem;
+      left: -7.45rem;
+      transform: translateY(-50%) scale(1.15);
+
+      background: url("../assets/img/lays-promotions/triangle_yellow.png") no-repeat;
+      background-position: 100% 54.3%;
+
+      @media screen and (max-width: 1400px) {
+        transform: translateY(-50%) scale(1);
+        left: -7rem;
+        background-position: 100% 55.3%;
+      }
+    }
+
+    & .lays-promotions__content {
+      top: 30.49rem;
+      width: 100%;
+
+      @media screen and (max-width: 1400px) {
+        top: 30.3rem;
+        left: 2px;
+      }
+    }
+
+    & .lays-promotions__title {
+      text-align: center;
+
+      // improve pixel-perfect
+      padding-right: 3px;
+    }
+
+    & .button {
+      position: relative;
+      left: 50%;
+      margin-top: 2.75rem;
+
+      transform: translateX(-50%);
+    }
+  }
+
+  & [data-item="balloon"] {
+    transform: scale(1.1);
+    overflow: hidden;
+    top: -3px;
+    z-index: 1;
+    transition: transform 13s, margin-left 18s;
+    margin-left: -13px;
+
+    &:hover {
+      transform: scale(1.2);
+      z-index: 2;
+    }
+
+    @media screen and (max-width: 1400px) {
+      margin-left: -10px;
+    }
+  }
+
+  & [data-item="beach"] {
+    transition: transform 13s;
+    z-index: 4;
+    &:hover {
+      transform: scale(1.2);
+      z-index: 4;
+    }
+  }
+}
+
+// improve pixel perfect
+.lays-promotions {
+  & .lays-promotions__list:nth-child(2) {
+    margin-top: -6px;
+  }
+}
