@@ -64,6 +64,13 @@
 
     & > div.small-letter-spacing {
       letter-spacing: -1.3px;
+      @media screen and (max-width: 1400px) {
+        letter-spacing: initial;
+      }
+    }
+
+    @media screen and (max-width: 1400px) {
+      letter-spacing: initial;
     }
   }
 
@@ -74,17 +81,16 @@
       position: absolute;
       top: 50%;
       z-index: 6;
-      right: -5.14rem;
+      right: calc(-5.14rem / 1.5);
 
       height: 10.95rem;
-      width: 5.04rem;
+      width: 5.14rem;
 
-      transform: translateY(-86%) scale(1.2);
+      transform: translateY(-110%);
       background: url("../assets/img/lays-promotions/triangle_red.png") no-repeat;
-
+      background-size: contain;
       @media screen and (max-width: 1400px) {
-        transform: translateY(-91%) scale(1);
-        right: -5.04rem;
+        transform: translateY(-109%);
       }
     }
 
@@ -167,19 +173,14 @@
       position: absolute;
       z-index: 6;
       top: 50%;
-      height: 100%;
-      width: 7rem;
-      left: -7.45rem;
-      transform: translateY(-50%) scale(1.15);
+      left: calc(-5.14rem / 1.5);
+
+      height: 10.95rem;
+      width: 5.14rem;
+      transform: translateY(-32%);
 
       background: url("../assets/img/lays-promotions/triangle_yellow.png") no-repeat;
-      background-position: 100% 54.3%;
-
-      @media screen and (max-width: 1400px) {
-        transform: translateY(-50%) scale(1);
-        left: -7rem;
-        background-position: 100% 55.3%;
-      }
+      background-size: contain;
     }
 
     & .lays-promotions__content {
@@ -205,6 +206,9 @@
       margin-top: 2.75rem;
 
       transform: translateX(-50%);
+      @media screen and (max-width: 1400px) {
+        margin-top: 2.55rem;
+      }
     }
   }
 
@@ -213,7 +217,7 @@
     overflow: hidden;
     top: -3px;
     z-index: 1;
-    transition: transform 13s, margin-left 18s;
+    transition: transform 13s, margin-left 13s;
     margin-left: -13px;
 
     &:hover {
