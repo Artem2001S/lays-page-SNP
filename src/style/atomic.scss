@@ -1,0 +1,13 @@
+// display - none in mobile version
+.dn_mobile {
+  @media screen and (max-width: 680px) {
+    display: none;
+  }
+}
+
+// display - none in mobile version
+.dn_desktop {
+  @media screen and (min-width: 680px) {
+    display: none;
+  }
+}
