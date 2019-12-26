@@ -1,5 +1,7 @@
 .lays-promotions {
   overflow: hidden;
+
+  // imrpove pixel-perfect
   margin-top: -5px;
 
   &__list {
@@ -19,25 +21,14 @@
     @media screen and (max-width: 680px) {
       width: 100%;
     }
+  }
 
-    & img {
-      position: relative;
-      z-index: 4;
+  &__background {
+    position: relative;
+    z-index: 4;
 
-      width: 100%;
-      height: 100%;
-
-      @media screen and (max-width: 680px) {
-        display: none;
-      }
-    }
-
-    & img.img-mobile {
-      display: none;
-      @media screen and (max-width: 680px) {
-        display: block;
-      }
-    }
+    width: 100%;
+    height: 100%;
   }
 
   &__content {
@@ -94,6 +85,7 @@
       transform: translateY(-110%);
       background: url("../assets/img/lays-promotions/triangle_red.png") no-repeat;
       background-size: contain;
+
       @media screen and (max-width: 1400px) {
         transform: translateY(-109%);
       }
@@ -213,7 +205,7 @@
     top: 7px;
 
     @media screen and (max-width: 680px) {
-      top: 9px;
+      top: 10px;
     }
     // triangle
     &::before {
@@ -299,7 +291,7 @@
       transform: none;
       transition: none;
       margin-left: 0;
-      margin-top: -10%;
+      margin-top: -11%;
       margin-bottom: -10%;
 
       &:hover {
@@ -336,7 +328,7 @@
     margin-bottom: -3px;
 
     @media screen and (max-width: 1400px) {
-      margin-bottom: -1px;
+      margin-bottom: -2px;
     }
   }
 }

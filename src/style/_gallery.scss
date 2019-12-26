@@ -1,8 +1,11 @@
 .gallery {
-  display: flex;
   position: relative;
-  width: 100%;
+  display: flex;
   justify-content: stretch;
+
+  width: 100%;
+
+  // improve pixel-perfect
   margin-top: -4px;
 
   @media screen and (max-width: 680px) {
@@ -10,31 +13,17 @@
     margin-top: 0px;
   }
 
+  &__background {
+    width: 100%;
+    height: 100%;
+  }
+
   &__banner {
     position: relative;
     width: 50%;
-    & img {
-      width: 100%;
-      height: 100%;
-
-      @media screen and (max-width: 1400px) {
-        height: 100%;
-      }
-    }
-
-    &_mobile {
-      display: none;
-    }
 
     @media screen and (max-width: 680px) {
       width: 100%;
-      & img {
-        display: none;
-      }
-
-      & img.gallery__banner_mobile {
-        display: block;
-      }
     }
   }
 
@@ -53,10 +42,7 @@
 
     @media screen and (max-width: 680px) {
       width: 100%;
-      padding-top: 13px;
-      padding-left: 15px;
-      padding-right: 15px;
-      padding-bottom: 20px;
+      padding: 13px 15px 19px;
       grid-column-gap: 4px;
     }
   }
@@ -74,7 +60,7 @@
     font-weight: 700;
 
     @media screen and (max-width: 1400px) {
-      line-height: 3.80rem;
+      line-height: 3.8rem;
       padding-top: 17.5rem;
       padding-left: 6.2rem;
       letter-spacing: -0.4px;
@@ -87,6 +73,7 @@
       padding-left: 11rem;
     }
 
+    // vk-insta pointer (icon)
     &::before {
       content: "";
       position: absolute;
@@ -100,7 +87,6 @@
       background-repeat: no-repeat;
       background-size: contain;
 
-
       @media screen and (max-width: 1400px) {
         left: 7.6rem;
         top: 3.1rem;
@@ -108,46 +94,46 @@
 
       @media screen and (max-width: 680px) {
         top: 8.1rem;
-        left: 7.0rem;
+        left: 7rem;
 
         width: 42.5rem;
-        height: 0;
-        padding-bottom: 42.5rem;
+        height: 42.5rem;
 
         background-image: url("./../assets/img/gallery/vk-insta-pointer_mobile.png");
       }
     }
+  }
 
-    & .hashtag {
-      position: relative;
-      z-index: 2;
-      margin-left: -9px;
+  &__hashtag {
+    position: relative;
+    z-index: 2;
+
+    margin-left: -9px;
+    letter-spacing: -1px;
+
+    @media screen and (max-width: 1400px) {
+      padding: 3px 17px 5px 9px;
       letter-spacing: -1px;
-
-      @media screen and (max-width: 1400px) {
-        padding: 3px 17px 5px 9px;
-        letter-spacing: -1px;
-        line-height: normal;
-      }
-
-      @media screen and (max-width: 680px) {
-        display: inline-block;
-        padding: 2px 9px 2px 4px;
-        margin-left: -4px;
-      }
+      line-height: normal;
     }
 
-    & .button {
-      position: relative;
-      z-index: 3;
-      margin-top: 2.55rem;
-      margin-left: -0.52rem;
+    @media screen and (max-width: 680px) {
+      display: inline-block;
+      padding: 2px 9px 2px 4px;
+      margin-left: -4px;
+    }
+  }
 
-      @media screen and (max-width: 680px) {
-        margin-top: 0;
-        top: -9.5rem;
-        margin-left: 44.71rem;
-      }
+  &__button {
+    position: relative;
+    z-index: 3;
+    margin-top: 2.55rem;
+    margin-left: -0.52rem;
+
+    @media screen and (max-width: 680px) {
+      margin-top: 0;
+      top: -9.5rem;
+      margin-left: 44.71rem;
     }
   }
 

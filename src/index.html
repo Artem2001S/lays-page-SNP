@@ -10,17 +10,17 @@
 </head>
 
 <body>
-  <div class="main">
+  <div class="main-wrapper">
     <div class="menu">
       <a href="#" class="menu__logo">
         <div class="menu__logo-text">#летосLays</div>
       </a>
       <label for="menu-dropper">
         <input type="checkbox" id="menu-dropper" class="menu-dropper">
-        <div class="menu__burger">
-          <span class="top"></span>
-          <span class="middle"></span>
-          <span class="bottom"></span>
+        <div class="menu__burger dn_desktop">
+          <span class="menu__burger-item menu__burger-item_top"></span>
+          <span class="menu__burger-item menu__burger-item_middle"></span>
+          <span class="menu__burger-item menu__burger-item_bottom"></span>
         </div>
         <nav class="nav">
           <div class="nav__item" data-icon="camera">Галерея</div>
@@ -37,7 +37,7 @@
         <img class="summer-with-lays__background summer-with-lays__background_mobile"
           src="./assets/img/summer-with-lays/background_mobile.jpg" alt="Background">
 
-        <div class="steps">
+        <div class="steps summer-with-lays__steps">
           <span class="step">
             <span class="step__icon" data-icon="camera">
             </span>
@@ -64,35 +64,39 @@
 
         <div class="summer-with-lays__label">
           <div class="summer-with-lays__label_large text-uppercase">
-            Лет<span class="small-letter-spacing">о</span>
+            Лет<span class="letter-spacing-minus-1">о</span>
           </div>
           <div class="text-uppercase">
             вкуснее
           </div>
-          <div>
+          <div class="div-for-create-new-line">
             <span class="text-uppercase">с</span>
-            <span class="summer-with-lays__label_middle summer-with-lays__label_font-weight_black">
-              Lay<span class="small-letter-spacing">'s</span>
+            <span class="summer-with-lays__label_middle fw-black">
+              Lay<span class="letter-spacing-minus-1">'s</span>
             </span>
           </div>
         </div>
+
+        <!-- improve pixel-perfect -->
         <div class="white-block"></div>
+
       </section>
       <!-- ./summer-with-lays -->
 
       <section class="gallery">
         <div class="gallery__banner">
-          <img src="./assets/img/gallery/gallery__banner.jpg" alt="Banner">
-          <img class="gallery__banner_mobile" src="./assets/img/gallery/gallery__banner_mobile.png" alt="Banner mobile">
+          <img class="gallery__background dn_mobile" src="./assets/img/gallery/gallery__banner.jpg" alt="Banner">
+          <img class="gallery__background dn_desktop" src="./assets/img/gallery/gallery__banner_mobile.png"
+            alt="Banner mobile">
 
           <div class="gallery__label">
-            <div>Загружай</div>
-            <div>фото</div>
-            <div>с хэштегом</div>
-            <div class="hashtag">
+            <div class="div-for-create-new-line">Загружай</div>
+            <div class="div-for-create-new-line">фото</div>
+            <div class="div-for-create-new-line">с хэштегом</div>
+            <div class="gallery__hashtag hashtag">
               #летосLays
             </div>
-            <button class="button">
+            <button class="gallery__button button">
               Галерея
             </button>
           </div>
@@ -113,9 +117,12 @@
 
       <section class="lays-promotions">
         <div class="lays-promotions__list">
-          <div class="lays-promotions__item" data-item="red">
-            <img src="./assets/img/lays-promotions/red-background.png" alt="Background">
-            <img class="img-mobile" src="./assets/img/lays-promotions/red-background_mobile.png" alt="Background">
+          <div class="lays-promotions__item lays-promotions__red-block" data-item="red">
+            <img class="lays-promotions__background dn_mobile" src="./assets/img/lays-promotions/red-background.png"
+              alt="Background">
+            <img class="lays-promotions__background dn_desktop"
+              src="./assets/img/lays-promotions/red-background_mobile.png" alt="Background">
+
             <div class="lays-promotions__content">
               <div class="lays-promotions__title dn_mobile">
                 Выиграй <br> призы <br> от Lay's
@@ -141,19 +148,24 @@
             </div>
           </div>
           <div class="lays-promotions__item" data-item="balloon">
-            <img src="./assets/img/lays-promotions/lays-balloon.jpg" alt="Background">
-            <img class="img-mobile" src="./assets/img/lays-promotions/lays-balloon_mobile.jpg" alt="Background">
+            <img class="lays-promotions__background dn_mobile" src="./assets/img/lays-promotions/lays-balloon.jpg"
+              alt="Background">
+            <img class="lays-promotions__background dn_desktop"
+              src="./assets/img/lays-promotions/lays-balloon_mobile.jpg" alt="Background">
           </div>
         </div>
         <div class="lays-promotions__list">
           <div class="lays-promotions__item" data-item="beach">
-            <img src="./assets/img/lays-promotions/lays-on-the-beach.jpg" alt="Background">
-            <img class="img-mobile" src="./assets/img/lays-promotions/lays-on-the-beach_mobile.jpg" alt="Background">
-
+            <img class="lays-promotions__background dn_mobile" src="./assets/img/lays-promotions/lays-on-the-beach.jpg"
+              alt="Background">
+            <img class="lays-promotions__background dn_desktop"
+              src="./assets/img/lays-promotions/lays-on-the-beach_mobile.jpg" alt="Background">
           </div>
           <div class="lays-promotions__item" data-item="map">
-            <img src="./assets/img/lays-promotions/lays-map.jpg" alt="Background">
-            <img class="img-mobile" src="./assets/img/lays-promotions/lays-map_mobile.png" alt="Background">
+            <img class="lays-promotions__background dn_mobile" src="./assets/img/lays-promotions/lays-map.jpg"
+              alt="Background">
+            <img class="lays-promotions__background dn_desktop" src="./assets/img/lays-promotions/lays-map_mobile.png"
+              alt="Background">
             <div class="lays-promotions__content">
               <div class="lays-promotions__title lays-promotions__title_black lays-promotions__title_large">
                 Лето с Lay's
@@ -172,7 +184,7 @@
           <div class="footer__left-block">
             <img class="dn_mobile logo footer__logo " src="./assets/img/footer/logo_small.jpg" alt="Logo">
             <div class="footer__copyright">
-              © 2015 Lay's Russia. <span class="small-letter-spacing dn_mobile">Все права защищены</span>
+              © 2015 Lay's Russia. <span class="letter-spacing-minus-1 dn_mobile">Все права защищены</span>
             </div>
           </div>
           <div class="footer__social-links">
