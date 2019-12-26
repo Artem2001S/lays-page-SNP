@@ -74,9 +74,10 @@
     font-weight: 700;
 
     @media screen and (max-width: 1400px) {
-      line-height: 3.85rem;
+      line-height: 3.80rem;
       padding-top: 17.5rem;
       padding-left: 6.2rem;
+      letter-spacing: -0.4px;
     }
 
     @media screen and (max-width: 680px) {
@@ -124,13 +125,14 @@
       letter-spacing: -1px;
 
       @media screen and (max-width: 1400px) {
-        padding: 0px 17px 0px 9px;
+        padding: 3px 17px 5px 9px;
         letter-spacing: -1px;
+        line-height: normal;
       }
 
       @media screen and (max-width: 680px) {
         display: inline-block;
-        padding: 0px 9px 0px 4px;
+        padding: 2px 9px 2px 4px;
         margin-left: -4px;
       }
     }

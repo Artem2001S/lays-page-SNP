@@ -20,6 +20,12 @@
     background-color: rgba(143,12,0,0.28);
   }
 
+  @media screen and (max-width: 1400px) {
+    // imrpove pixel-perfect
+    width: 15.65rem;
+    height: 4.44rem;
+  }
+
   @media screen and (max-width: 680px) {
     width: 34.5rem;
     height: 10rem;

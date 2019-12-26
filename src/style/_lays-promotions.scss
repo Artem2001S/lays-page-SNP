@@ -73,19 +73,13 @@
     font-size: 1.43rem;
     font-weight: 400;
 
-    & > div.small-letter-spacing {
-      letter-spacing: -1.3px;
-      @media screen and (max-width: 1400px) {
-        letter-spacing: initial;
-      }
-    }
-
     @media screen and (max-width: 1400px) {
       letter-spacing: initial;
     }
   }
 
   & [data-item="red"] {
+
     // triangle
     &::after {
       content: "";
@@ -182,10 +176,6 @@
         margin-left: 5rem;
         max-width: 50rem;
         margin-top: 8.8rem;
-
-        & .small-letter-spacing {
-          letter-spacing: 0.1px;
-        }
       }
     }
 
@@ -311,6 +301,10 @@
       margin-left: 0;
       margin-top: -10%;
       margin-bottom: -10%;
+
+      &:hover {
+        transform: none;
+      }
     }
   }
 
@@ -319,7 +313,6 @@
     z-index: 4;
     &:hover {
       transform: scale(1.2);
-      z-index: 4;
     }
 
     @media screen and (max-width: 680px) {
@@ -327,6 +320,11 @@
       transition: none;
       order: 1;
       margin-top: calc(-5% + 5px);
+      z-index: 1;
+
+      &:hover {
+        transform: none;
+      }
     }
   }
 }

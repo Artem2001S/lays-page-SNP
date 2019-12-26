@@ -5,6 +5,7 @@
   overflow: hidden;
 
   background-color: #ffda2d;
+
   &__background {
     width: 100%;
     height: auto;
@@ -48,13 +49,18 @@
     animation: right-to-left 1s ease-out;
 
     padding-left: 5rem;
-    padding-top: 7px;
+    padding-top: 8px;
     color: $red-text;
     font-family: $fontFam;
     font-size: 3.4rem;
     font-weight: 400;
     line-height: 2.37rem;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
+
+    @media screen and (max-width: 1400px) {
+      letter-spacing: 4px;
+      line-height: 2.12rem;
+    }
 
     @media screen and (max-width: 1024px) {
       line-height: 10px;
