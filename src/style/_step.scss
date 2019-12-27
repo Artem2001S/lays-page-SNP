@@ -49,14 +49,73 @@
 
     &[data-icon="camera"] {
       animation-delay: 1s;
+
+      &:hover::after {
+        animation: camera 0.4s linear;
+        animation-direction: reverse;
+      }
+
+      @keyframes camera {
+        from {
+          transform: translate(-50%, -50%);
+        }
+        50% {
+          transform: translate(-50%, -45%);
+        }
+        75% {
+          transform: translate(-50%, -55%);
+        }
+        to {
+          transform: translate(-50%, -50%);
+        }
+      }
     }
 
     &[data-icon="heart"] {
       animation-delay: 1.4s;
+
+      &:hover::after {
+        animation: heart 2s infinite;
+        animation-direction: reverse;
+      }
+
+      @keyframes heart {
+        from {
+          transform: translate(-50%, -50%) rotate(0);
+        }
+        50% {
+          transform: translate(-55%, -45%) scale(1.1) skew(8deg) rotate(5deg);
+        }
+        75% {
+          transform: translate(-48%, -55%) scale(1.1) skew(3deg) rotate(-5deg);
+        }
+        to {
+          transform: translate(-50%, -50%) rotate(0);
+        }
+      }
     }
 
     &[data-icon="award"] {
       animation-delay: 1.8s;
+
+      &:hover::after {
+        animation: award 0.8s linear;
+      }
+
+      @keyframes award {
+        from {
+          transform: translate(-50%, -50%) scale(1);
+        }
+        50% {
+          transform: translate(-50%, -45%) scale(1.4, 0.7) skew(4deg);
+        }
+        75% {
+          transform: translate(-50%, -55%) scale(1.3, 0.8) skew(1deg);
+        }
+        to {
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
     }
 
     &[data-icon]::after {

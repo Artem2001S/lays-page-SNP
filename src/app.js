@@ -28,6 +28,15 @@ function hideMenu() {
   });
 }
 
+function isScrolledIntoView(el) {
+  const rect = el.getBoundingClientRect();
+  const elemTop = rect.top;
+  const elemBottom = rect.bottom;
+
+  const isVisible = elemTop < window.innerHeight && elemBottom >= 0;
+  return isVisible;
+}
+
 checkbox.addEventListener('change', function () {
   if (window.matchMedia('(max-width: 680px)').matches) {
     hideMenu();
@@ -37,26 +46,18 @@ checkbox.addEventListener('change', function () {
 });
 
 function animateLaysPromotions() {
-  let doneFirst = false;
-  let doneSecond = false;
-
   const redBlock = document.querySelector('.lays-promotions__item[data-item="red"]');
   const balloon = document.querySelector('.lays-promotions__item[data-item="balloon"]');
   const beach = document.querySelector('.lays-promotions__item[data-item="beach"]');
   const map = document.querySelector('.lays-promotions__item[data-item="map"]');
 
-  const clientBottomFirst = balloon.getBoundingClientRect().top - balloon.getBoundingClientRect().height;
-  const clientBottomSecond = map.getBoundingClientRect().top - map.getBoundingClientRect().height;
-
-  if (clientBottomFirst < 0 && doneFirst === false) {
-    doneFirst = true;
+  if (isScrolledIntoView(redBlock)) {
     redBlock.style.animation = 'show_to-right 1s ease-in-out forwards';
     balloon.style.animation = 'show_to-left 1.2s ease-in forwards';
     balloon.style.zIndex = 1;
   }
 
-  if (clientBottomSecond < 0 && doneSecond === false) {
-    doneSecond = true;
+  if (isScrolledIntoView(map)) {
     beach.style.animation = 'show_to-right 1.2s ease-in forwards';
     map.style.animation = 'show_to-left 1s ease-in-out forwards';
   }
