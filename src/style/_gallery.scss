@@ -5,12 +5,35 @@
 
   width: 100%;
 
+  animation: left-to-right 1s ease-out;
+
+  @keyframes left-to-right {
+    from {
+      margin-left: -25%;
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 0.4;
+    }
+
+    85% {
+      margin-left: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
   // improve pixel-perfect
   margin-top: -4px;
 
   @media screen and (max-width: 680px) {
     flex-direction: column;
     margin-top: 0px;
+
+    animation: none;
   }
 
   &__background {
