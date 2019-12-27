@@ -73,6 +73,10 @@ window.addEventListener('scroll', () => {
 
     if (prevScrollPosition < currentScrollPosition) {
       menu.style.top = '-80px';
+      if (checkbox.checked) {
+        checkbox.checked = false;
+        hideMenu();
+      }
     } else {
       menu.style.top = '0';
     }
