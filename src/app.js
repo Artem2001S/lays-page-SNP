@@ -52,14 +52,14 @@ function animateLaysPromotions() {
   const map = document.querySelector('.lays-promotions__item[data-item="map"]');
 
   if (isScrolledIntoView(redBlock)) {
-    redBlock.style.animation = 'show_to-right 1s ease-in-out forwards';
-    balloon.style.animation = 'show_to-left 1.2s ease-in forwards';
+    redBlock.style.animation = 'show_to-right 1s ease forwards';
+    balloon.style.animation = 'show_to-left 1s ease forwards';
     balloon.style.zIndex = 1;
   }
 
   if (isScrolledIntoView(map)) {
-    beach.style.animation = 'show_to-right 1.2s ease-in forwards';
-    map.style.animation = 'show_to-left 1s ease-in-out forwards';
+    beach.style.animation = 'show_to-right 1s ease forwards';
+    map.style.animation = 'show_to-left 1s ease forwards';
   }
 }
 
