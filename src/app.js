@@ -7,6 +7,7 @@ const nav = document.querySelector('.nav');
 function hideMenu() {
   items.forEach((el, index) => {
     let className;
+
     // if need to hide menu
     if (checkbox.checked === false) {
       if (index % 2 !== 0) {
@@ -65,10 +66,12 @@ function animateLaysPromotions() {
 
 animateLaysPromotions();
 
+// mobile menu
 let prevScrollPosition = window.pageYOffset;
 const menu = document.querySelector('.menu');
 window.addEventListener('scroll', () => {
-  // hide menu
+
+  // hide mobile menu
   if (window.matchMedia('(max-width: 680px)').matches) {
     const currentScrollPosition = window.pageYOffset;
 
@@ -87,4 +90,3 @@ window.addEventListener('scroll', () => {
   }
   animateLaysPromotions();
 });
-
