@@ -4,14 +4,15 @@
 
   overflow: hidden;
 
-  background-color: #ffda2d;
+  background-color: $yellow;
 
   &__background {
     width: 100%;
     height: auto;
+
     animation: right-to-left 1s ease-out;
 
-    @media screen and (max-width: 680px) {
+    @include media-mobile {
       display: none;
       animation: show 0.9s ease-out;
     }
@@ -19,7 +20,7 @@
     &_mobile {
       display: none;
 
-      @media screen and (max-width: 680px) {
+      @include media-mobile {
         display: block;
       }
     }
@@ -29,10 +30,11 @@
     position: absolute;
     top: 0;
     left: 0;
+
     padding-top: 4.75rem;
     padding-left: 4.59rem;
 
-    @media screen and (max-width: 680px) {
+    @include media-mobile {
       top: 145px;
       padding-top: 0;
       padding-left: 0rem;
@@ -44,12 +46,13 @@
     position: absolute;
     top: calc(4.75rem + 39%);
     left: 0;
+
     width: 100%;
+    padding-left: 5rem;
+    padding-top: 8px;
 
     animation: right-to-left 1s ease-out;
 
-    padding-left: 5rem;
-    padding-top: 8px;
     color: $red-text;
     font-family: $fontFam;
     font-size: 3.4rem;
@@ -57,26 +60,28 @@
     line-height: 2.37rem;
     letter-spacing: 5px;
 
-    @media screen and (max-width: 1400px) {
+    @include media-laptop_L {
       letter-spacing: 4px;
       line-height: 2.12rem;
     }
 
-    @media screen and (max-width: 1024px) {
+    @include media-laptop {
       line-height: 10px;
       padding-top: 0;
       font-size: 3rem;
     }
 
-    @media screen and (max-width: 680px) {
-      padding-top: 0;
+    @include media-mobile {
       top: 20px;
+
+      padding-top: 0;
       padding-left: 1px;
+
       text-align: center;
       font-size: 25px;
       line-height: 25px;
       letter-spacing: 1px;
-      color: #d62b2b;
+      color: $red-text_dark;
       animation: none;
     }
 
@@ -87,19 +92,20 @@
       font-weight: 500;
       line-height: 6.99vw;
 
-      @media screen and (max-width: 1400px) {
+      @include media-laptop_L {
         letter-spacing: 4.2px;
       }
 
-      @media screen and (max-width: 1024px) {
+      @include media-laptop {
         font-size: 5.8rem;
       }
 
-      @media screen and (max-width: 680px) {
+      @include media-mobile {
+        padding-left: 8px;
+
         font-size: 44px;
         line-height: 44px;
         letter-spacing: 2px;
-        padding-left: 8px;
       }
     }
 
@@ -108,17 +114,17 @@
       font-size: 5.25rem;
       letter-spacing: 5.5px;
 
-      @media screen and (max-width: 1400px) {
+      @include media-laptop_L {
         letter-spacing: 3px;
       }
 
-      @media screen and (max-width: 1024px) {
+      @include media-laptop {
         font-size: 4.71rem;
         line-height: 5.9rem;
         letter-spacing: 3.5px;
       }
 
-      @media screen and (max-width: 680px) {
+      @include media-mobile {
         font-size: 37px;
         line-height: 25px;
         letter-spacing: 1px;
@@ -149,7 +155,7 @@
 @keyframes show {
   from {
     opacity: 0;
-    background-color: #ffda2d;
+    background-color: $yellow;
   }
 
   50% {

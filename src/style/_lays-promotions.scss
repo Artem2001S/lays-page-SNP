@@ -1,15 +1,15 @@
 .lays-promotions {
-  overflow: hidden;
-
   // imrpove pixel-perfect
   margin-top: -5px;
+
+  overflow: hidden;
 
   &__list {
     position: relative;
     display: flex;
     overflow: hidden;
 
-    @media screen and (max-width: 680px) {
+    @include media-mobile {
       flex-direction: column;
     }
   }
@@ -17,12 +17,13 @@
   &__item {
     position: relative;
     width: 50%;
-    opacity: 0;
     z-index: 4;
 
-    @media screen and (max-width: 680px) {
-      opacity: 1;
+    opacity: 0;
+
+    @include media-mobile {
       width: 100%;
+      opacity: 1;
     }
   }
 
@@ -38,7 +39,7 @@
   }
 
   &__title {
-    color: #ffffff;
+    color: $white;
     line-height: 4.22rem;
 
     font-family: $fontFam;
@@ -56,7 +57,7 @@
   }
 
   &__description {
-    color: #ffffff;
+    color: $white;
 
     letter-spacing: -2px;
     line-height: 1.2rem;
@@ -64,7 +65,7 @@
     font-size: 1.43rem;
     font-weight: 400;
 
-    @media screen and (max-width: 1400px) {
+    @include media-laptop_L {
       letter-spacing: initial;
     }
   }
@@ -86,11 +87,11 @@
       background: url("../assets/img/lays-promotions/triangle_red.png") no-repeat;
       background-size: contain;
 
-      @media screen and (max-width: 1400px) {
+      @include media-laptop_L {
         transform: translateY(-109%);
       }
 
-      @media screen and (max-width: 680px) {
+      @include media-mobile {
         display: none;
       }
     }
@@ -98,20 +99,23 @@
     & .lays-promotions__title {
       padding-left: 14.8rem;
 
-      @media screen and (max-width: 1400px) {
-        line-height: 4.2rem;
-        letter-spacing: -0.5px;
-        padding-left: 14.6rem;
-
+      @include media-laptop_L {
         // improve pixel perfect
         margin-top: -1px;
+
+        padding-left: 14.6rem;
+
+        line-height: 4.2rem;
+        letter-spacing: -0.5px;
+
       }
 
-      @media screen and (max-width: 680px) {
-        font-size: 8.875rem;
-        line-height: 8.875rem;
+      @include media-mobile {
         padding-left: 4.6rem;
         margin-top: 2rem;
+
+        font-size: 8.875rem;
+        line-height: 8.875rem;
         letter-spacing: 0px;
       }
 
@@ -130,12 +134,12 @@
         background-repeat: no-repeat;
         background-size: cover;
 
-        @media screen and (max-width: 1400px) {
+        @include media-laptop_L {
           left: 2.9rem;
           top: -4.2rem;
         }
 
-        @media screen and (max-width: 680px) {
+        @include media-mobile {
           display: none;
         }
       }
@@ -145,49 +149,52 @@
       margin-top: 10.8rem;
       padding-left: 6rem;
 
-      @media screen and (max-width: 680px) {
+      @include media-mobile {
         width: 100%;
       }
     }
 
     & .lays-promotions__description {
-      margin-top: 5.1rem;
-      line-height: 1.73rem;
-
       // improve pixel-perfect
       margin-left: -2px;
 
-      @media screen and (max-width: 1400px) {
-        line-height: 1.73rem;
+      margin-top: 5.1rem;
+      line-height: 1.73rem;
+
+
+      @include media-laptop_L {
         margin-left: -3px;
+        line-height: 1.73rem;
       }
 
-      @media screen and (max-width: 680px) {
-        font-size: 3.75rem;
-        line-height: 5.15rem;
+      @include media-mobile {
         margin-left: 5rem;
         max-width: 50rem;
         margin-top: 8.8rem;
+
+        font-size: 3.75rem;
+        line-height: 5.15rem;
       }
     }
 
     & .button {
-      margin-top: 3.2rem;
-
       // improve pixel perfect
       margin-left: -4px;
 
-      @media screen and (max-width: 1400px) {
+      margin-top: 3.2rem;
+
+      @include media-laptop_L {
         margin-top: 2.9rem;
         margin-left: -5px;
       }
 
-      @media screen and (max-width: 680px) {
+      @include media-mobile {
         position: absolute;
         left: 50%;
-        transform: translateX(-50%);
         bottom: -20.9rem;
+
         margin-left: 0;
+        transform: translateX(-50%);
       }
     }
   }
@@ -195,18 +202,20 @@
   & [data-item="map"],
   & [data-item="beach"] {
     margin-top: -6px;
-    @media screen and (max-width: 680px) {
+
+    @include media-mobile {
       margin-top: 0;
     }
   }
 
   & [data-item="map"] {
-    height: 102.5%;
     top: 7px;
+    height: 102.5%;
 
-    @media screen and (max-width: 680px) {
+    @include media-mobile {
       top: 10px;
     }
+
     // triangle
     &::before {
       content: "";
@@ -222,7 +231,7 @@
       background: url("../assets/img/lays-promotions/triangle_yellow.png") no-repeat;
       background-size: contain;
 
-      @media screen and (max-width: 680px) {
+      @include media-mobile {
         display: none;
       }
     }
@@ -231,24 +240,24 @@
       top: 30.49rem;
       width: 100%;
 
-      @media screen and (max-width: 1400px) {
+      @include media-laptop_L {
         top: 30.3rem;
         left: 2px;
       }
 
-      @media screen and (max-width: 680px) {
+      @include media-mobile {
         top: 65.3rem;
         left: 4px;
       }
     }
 
     & .lays-promotions__title {
-      text-align: center;
-
       // improve pixel-perfect
       padding-right: 3px;
 
-      @media screen and (max-width: 680px) {
+      text-align: center;
+
+      @include media-mobile {
         font-size: 9.25rem;
       }
     }
@@ -260,39 +269,40 @@
 
       transform: translateX(-50%);
 
-      @media screen and (max-width: 1400px) {
+      @include media-laptop_L {
         margin-top: 2.55rem;
       }
 
-      @media screen and (max-width: 680px) {
+      @include media-mobile {
         margin-top: 6.75rem;
       }
     }
   }
 
   & [data-item="balloon"] {
-    transform: scale(1.1);
-    overflow: hidden;
     top: -3px;
     z-index: 1;
-    transition: transform 13s, margin-left 13s;
     margin-left: -13px;
 
+    transform: scale(1.1);
+    overflow: hidden;
+    transition: transform 13s, margin-left 13s;
     &:hover {
       transform: scale(1.2);
       z-index: 2;
     }
 
-    @media screen and (max-width: 1400px) {
+    @include media-laptop_L {
       margin-left: -10px;
     }
 
-    @media screen and (max-width: 680px) {
-      transform: none;
-      transition: none;
+    @include media-mobile {
       margin-left: 0;
       margin-top: -11%;
       margin-bottom: -10%;
+
+      transform: none;
+      transition: none;
 
       &:hover {
         transform: none;
@@ -307,13 +317,13 @@
       transform: scale(1.2);
     }
 
-    @media screen and (max-width: 680px) {
+    @include media-mobile {
+      order: 1;
+      z-index: 1;
+      margin-top: calc(-5% + 5px);
+
       transform: none;
       transition: none;
-      order: 1;
-      margin-top: calc(-5% + 5px);
-      z-index: 1;
-
       &:hover {
         transform: none;
       }
@@ -327,7 +337,7 @@
     margin-top: -6px;
     margin-bottom: -3px;
 
-    @media screen and (max-width: 1400px) {
+    @include media-laptop_L {
       margin-bottom: -2px;
     }
   }

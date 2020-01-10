@@ -20,7 +20,7 @@
     animation-delay: 1.8s;
   }
 
-  @media screen and (max-width: 680px) {
+  @include media-mobile {
     justify-content: space-around;
   }
 }

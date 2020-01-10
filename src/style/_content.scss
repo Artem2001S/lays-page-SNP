@@ -1,6 +1,7 @@
 .content {
-  background-color: #ffda2d;
-  @media screen and (max-width: 680px) {
-    background-color: #ffffff;
+  background-color: $yellow;
+
+  @include media-mobile {
+    background-color: $white;
   }
 }

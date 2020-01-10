@@ -1,6 +1,6 @@
 // display: none in mobile version
 .dn_mobile {
-  @media screen and (max-width: 680px) {
+  @include media-mobile {
     display: none;
   }
 }
