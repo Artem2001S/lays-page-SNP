@@ -1,15 +1,18 @@
 import './style/main.scss';
 
+const MENU_ANIMATION_HIDE_DURATION = 400;
+const MOBILE_WIDTH = 680;
+
 const checkbox = document.querySelector('#menu-dropper');
-const items = Array.from(document.querySelectorAll('.nav__item'));
-const nav = document.querySelector('.nav');
+const items = Array.from(document.querySelectorAll('#nav-item'));
+const nav = document.querySelector('#nav');
 
 function hideMenu() {
   items.forEach((el, index) => {
     let className;
 
     // if need to hide menu
-    if (checkbox.checked === false) {
+    if (!checkbox.checked) {
       if (index % 2 !== 0) {
         className = 'animate-right_hide'
       } else {
@@ -22,7 +25,7 @@ function hideMenu() {
       setTimeout(() => {
         nav.style.display = 'none';
         el.classList.remove(className);
-      }, 400);
+      }, MENU_ANIMATION_HIDE_DURATION);
     } else {
       nav.style.display = 'block';
     }
@@ -34,12 +37,13 @@ function isScrolledIntoView(el) {
   const elemTop = rect.top;
   const elemBottom = rect.bottom;
 
-  const isVisible = elemTop < window.innerHeight && elemBottom >= 0;
-  return isVisible;
+  return elemTop < window.innerHeight && elemBottom >= 0;
 }
 
+const isMobileVersion = () => window.innerWidth < MOBILE_WIDTH;
+
 checkbox.addEventListener('change', function () {
-  if (window.matchMedia('(max-width: 680px)').matches) {
+  if (isMobileVersion()) {
     hideMenu();
   } else {
     checkbox.checked = !checkbox.checked;
@@ -47,10 +51,10 @@ checkbox.addEventListener('change', function () {
 });
 
 function animateLaysPromotions() {
-  const redBlock = document.querySelector('.lays-promotions__item[data-item="red"]');
-  const balloon = document.querySelector('.lays-promotions__item[data-item="balloon"]');
-  const beach = document.querySelector('.lays-promotions__item[data-item="beach"]');
-  const map = document.querySelector('.lays-promotions__item[data-item="map"]');
+  const redBlock = document.querySelector('#lays-promotions_red');
+  const balloon = document.querySelector('#lays-promotions_balloon');
+  const beach = document.querySelector('#lays-promotions_beach');
+  const map = document.querySelector('#lays-promotions_map');
 
   if (isScrolledIntoView(redBlock)) {
     redBlock.style.animation = 'show_to-right 1s ease forwards';
@@ -68,25 +72,26 @@ animateLaysPromotions();
 
 // mobile menu
 let prevScrollPosition = window.pageYOffset;
-const menu = document.querySelector('.menu');
+const menu = document.querySelector('#menu');
 window.addEventListener('scroll', () => {
 
   // hide mobile menu
-  if (window.matchMedia('(max-width: 680px)').matches) {
+  if (isMobileVersion()) {
     const currentScrollPosition = window.pageYOffset;
 
     if (prevScrollPosition < currentScrollPosition) {
-      menu.style.top = '-80px';
+      menu.classList.add('menu_hided');
       if (checkbox.checked) {
         checkbox.checked = false;
         hideMenu();
       }
     } else {
-      menu.style.top = '0';
+      menu.classList.remove('menu_hided');
     }
 
     prevScrollPosition = window.pageYOffset;
     return;
   }
+
   animateLaysPromotions();
 });

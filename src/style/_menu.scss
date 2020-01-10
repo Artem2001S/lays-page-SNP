@@ -18,6 +18,12 @@
     height: $mobile-menu-height;
   }
 
+  &_hided {
+    @include media-mobile {
+      top: -$mobile-menu-height;
+    }
+  }
+
   &-dropper {
     display: none;
 

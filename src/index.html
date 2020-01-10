@@ -11,7 +11,7 @@
 
 <body>
   <div class="main-wrapper">
-    <div class="menu">
+    <div class="menu" id="menu">
       <a href="#" class="menu__logo">
         <div class="menu__logo-text">#летосLays</div>
       </a>
@@ -22,11 +22,11 @@
           <span class="menu__burger-item menu__burger-item_middle"></span>
           <span class="menu__burger-item menu__burger-item_bottom"></span>
         </div>
-        <nav class="nav">
-          <div class="nav__item" data-icon="camera">Галерея</div>
-          <div class="nav__item" data-icon="gift-icon">О проекте</div>
-          <div class="nav__item" data-icon="geo-position-icon">Лето с Lay's</div>
-          <div class="nav__item nav__item_mobile-only">Свернуть меню</div>
+        <nav class="nav" id="nav">
+          <div class="nav__item" id="nav-item" data-icon="camera">Галерея</div>
+          <div class="nav__item" id="nav-item" data-icon="gift-icon">О проекте</div>
+          <div class="nav__item" id="nav-item" data-icon="geo-position-icon">Лето с Lay's</div>
+          <div class="nav__item nav__item_mobile-only" id="nav-item">Свернуть меню</div>
         </nav>
       </label>
     </div>
@@ -117,7 +117,7 @@
 
       <section class="lays-promotions">
         <div class="lays-promotions__list">
-          <div class="lays-promotions__item" data-item="red">
+          <div class="lays-promotions__item" data-item="red" id="lays-promotions_red">
             <img class="lays-promotions__background dn_mobile" src="./assets/img/lays-promotions/red-background.png"
               alt="Background">
             <img class="lays-promotions__background dn_desktop"
@@ -147,7 +147,7 @@
               <button class="button">О проекте</button>
             </div>
           </div>
-          <div class="lays-promotions__item" data-item="balloon">
+          <div class="lays-promotions__item" data-item="balloon" id="lays-promotions_balloon">
             <img class="lays-promotions__background dn_mobile" src="./assets/img/lays-promotions/lays-balloon.jpg"
               alt="Background">
             <img class="lays-promotions__background dn_desktop"
@@ -155,13 +155,13 @@
           </div>
         </div>
         <div class="lays-promotions__list">
-          <div class="lays-promotions__item" data-item="beach">
+          <div class="lays-promotions__item" data-item="beach" id="lays-promotions_beach">
             <img class="lays-promotions__background dn_mobile" src="./assets/img/lays-promotions/lays-on-the-beach.jpg"
               alt="Background">
             <img class="lays-promotions__background dn_desktop"
               src="./assets/img/lays-promotions/lays-on-the-beach_mobile.jpg" alt="Background">
           </div>
-          <div class="lays-promotions__item" data-item="map">
+          <div class="lays-promotions__item" data-item="map" id="lays-promotions_map">
             <img class="lays-promotions__background dn_mobile" src="./assets/img/lays-promotions/lays-map.jpg"
               alt="Background">
             <img class="lays-promotions__background dn_desktop" src="./assets/img/lays-promotions/lays-map_mobile.png"
