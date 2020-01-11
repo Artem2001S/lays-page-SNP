@@ -4,7 +4,7 @@ const MENU_ANIMATION_HIDE_DURATION = 400;
 const MOBILE_WIDTH = 680;
 
 const checkbox = document.querySelector('#menu-dropper');
-const items = Array.from(document.querySelectorAll('#nav-item'));
+const items = Array.from(document.querySelectorAll('.js-nav-item'));
 const nav = document.querySelector('#nav');
 
 function hideMenu() {
@@ -80,13 +80,13 @@ window.addEventListener('scroll', () => {
     const currentScrollPosition = window.pageYOffset;
 
     if (prevScrollPosition < currentScrollPosition) {
-      menu.classList.add('menu_hided');
+      menu.classList.add('menu_hidden');
       if (checkbox.checked) {
         checkbox.checked = false;
         hideMenu();
       }
     } else {
-      menu.classList.remove('menu_hided');
+      menu.classList.remove('menu_hidden');
     }
 
     prevScrollPosition = window.pageYOffset;
